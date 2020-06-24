@@ -21,6 +21,18 @@ a:hover {
   text-decoration: none;
 }
 
+#add_icon_design{
+  border: #fff solid 1px;
+  border-color: rgba(213, 213, 218, 0.25);
+  padding: 3px;
+}
+
+#add_icon_design:hover{
+  border-width: thick;
+  border: #fff solid 1px;
+  padding: 3px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Amazon Ember", sans-serif;
 }
@@ -494,12 +506,11 @@ section .small_1 {
 #h_feat:hover{
   border: #fff solid 1px;
   border-radius: 3px;
-  transition: none;
 }
 
 #h_feat_other:hover{
   border: #fff solid 1px;
   border-radius: 3px;
-  padding: inherit;
+  padding: 2px;
   transition: none;
 }
