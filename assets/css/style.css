@@ -1,5 +1,14 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+
+@font-face {font-family: "Amazon Ember"; src: url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.eot"); 
+src: url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.eot?#iefix") format("embedded-opentype"), 
+url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.woff2") format("woff2"), 
+url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.woff") format("woff"), 
+url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.ttf") format("truetype"), 
+url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.svg#Amazon Ember") format("svg"); }
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   color: #444444;
 }
 
@@ -13,7 +22,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Amazon Ember", sans-serif;
 }
 
 /*@media (max-width: 700px) {
@@ -21,6 +30,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 70%;
   }
 }*/
+
+.navbar {
+  padding: .1rem 1rem;
+}
 
 @media (max-width: 1000px) {
   #header .length .navbar-nav a {
@@ -61,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar {
   background: #545454;
-  padding: 2px 0;
+  padding: 0px 0px;
   font-size: 14px;
 }
 
@@ -79,7 +92,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   color: #fff;
   font-size: 12px;
-  padding: 4px 0 4px 24px;
   transition: 0.3s;
 }
 #header {
@@ -101,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   border-left: 8px solid #e96b56;
 }
 
@@ -135,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #545454;
   padding: 13px 15px 15px 25px;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Amazon Ember", sans-serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -223,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .middle .mobile ul li {
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 10px;
   font-size: 12px;
 }
 
@@ -233,6 +245,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .middle .mobile ul li a {
   color: white;
+}
+
+.dropdown-menu {
+  font-size: 0.8rem;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.dropdown-menu a:hover {
+  border: 2px solid black;
 }
 
 @media (max-width: 1366px) {
@@ -343,7 +365,7 @@ section .small_1 {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   color: #fff;
 }
 
@@ -408,7 +430,7 @@ section .small_1 {
   color: #DDD;
   transition: 0.3s;
   display: inline-block;
-  line-height: 0.7;
+  line-height: 0.95;
   font-size: 11px;
 }
 
@@ -462,33 +484,22 @@ section .small_1 {
   color: #fff;
 }
 
-@media (min-width: 1096px) {
-.card-columns {
-    column-count: 4;
-  }
-}
-
-@media (max-width: 850px) {
-.card-columns {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 700px) {
-.card-columns {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 500px) {
-.card-columns {
-    column-count: 1;
-  }
-}
-
 .nav-link {
   line-height: 0.95;
   font-size: 12px;
-  margin-right: 25px;
+  margin-right: 14px;
   color: white;
+}
+
+#h_feat:hover{
+  border: #fff solid 1px;
+  border-radius: 3px;
+  transition: none;
+}
+
+#h_feat_other:hover{
+  border: #fff solid 1px;
+  border-radius: 3px;
+  padding: inherit;
+  transition: none;
 }
