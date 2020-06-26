@@ -294,8 +294,12 @@ section .small_1 {
 }
 
 .section-title {
-  text-align: center;
-  padding-bottom: 30px;
+  text-align: left;
+  margin-left: 30px;
+  padding-bottom: 15px;
+  color: #444 !important;
+  font-weight: 400;
+  font-size: 16px !important;
 }
 
 .clients .owl-item {
@@ -317,6 +321,8 @@ section .small_1 {
 .clients .owl-nav, .clients .owl-dots {
   margin-top: 5px;
   text-align: center;
+  color: #111;
+
 }
 
 .clients .owl-dot {
@@ -447,7 +453,7 @@ section .small_1 {
 }
 
 #footer .footer-top .footer-links-small ul li {
-  line-height: 3.0;
+  line-height: 4.5;
 }
 
 #footer .footer-top .footer-links-small ul {
@@ -503,14 +509,105 @@ section .small_1 {
   color: white;
 }
 
+.under {
+  color:#0066C0;
+  font-size: 17px;
+}
+
+.under:hover {
+  font-size: 17px;
+  color:#C45500;
+  text-decoration: underline;
+}
+
+.card-title {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.text-muted {
+  font-size: 12px;
+  font-weight: 560!important;
+  color: #111!important;
+}
+
+.white {
+  background-color: white!important;
+}
+
+@media (max-width: 576px) {
+  .w-sm-100 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 788px) {
+  .w-md-75 {
+    width: 75%;
+  }
+}
+
+@media (max-width: 900px) {
+  .w-lg-50 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .w-xl-25 {
+    width: 20%;
+  }
+}
+
+.owl-nav button {
+  background-color: black!important;
+  color: white!important;
+  position: absolute;
+  top: 28%;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.owl-nav button.owl-prev {
+  left: 0;
+  padding: 20px;
+}
+.owl-nav button.owl-next {
+  padding: 20px;
+  right: 0;
+}
+
+h2 {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #888; 
+  line-height: 0.1em;
+  margin: 10px 0 20px; 
+} 
+
+h2 span { 
+   background:#fff; 
+   font-size: 12px;
+   padding:0 10px; 
+}
+
 #h_feat:hover{
   border: #fff solid 1px;
   border-radius: 3px;
+  text-decoration: none;
+  outline: 0;
 }
 
 #h_feat_other:hover{
   border: #fff solid 1px;
   border-radius: 3px;
-  padding: 2px;
-  transition: none;
+  transition: all;
+  text-decoration: none;
+  outline: 0;
 }
+
+/*
+
+<a href="#" class="nav-item nav-link active" id="h_feat">Hello, Sign in <br>Accounts & Lists<i class="icofont-caret-down text-light"></i></a>
+<a href="#" class="nav-item nav-link" id="h_feat">Returns <br> & Orders</a>
+<a href="#" class="nav-item nav-link" id="h_feat">Try <br> Prime<i class="icofont-caret-down text-light"></i></a>
+<a href="#" class="nav-item nav-link" id="h_feat"><i class="icofont-cart icofont-2x"></i>Cart</a>

@@ -21,10 +21,11 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/sidenav.min.css" rel="stylesheet">
   <link href="assets/css/templatemo-main.css" rel="stylesheet">
   <link href="assets/css/templatemo-misc.css" rel="stylesheet">
-  <link href="assets/css/font-awesome.min" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/dropdown.css" rel="stylesheet">
+  <link href="assets/css/reset.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
           <h5 class="m-0 p-0">
             <span class="rounded-circle bg-white d-inline-flex align-items-center justify-content-center" style="width: 22px; height: 22px;" >
               <i class="icofont icofont-user-alt-5 icofont-sm" style="color: #232f3e;"></i>
-            </span>
+            </span>sign in
             &nbsp;&nbsp;Hello, Sign in.
           </h5>
         </a>
@@ -313,7 +314,7 @@
   				</a>
   			</span>
 
-		    <a href="#" class="navbar-brand mr-5" id="h_feat"><img src="assets/img/logo.png" alt="" width="120px" class="img-fluid"></a>
+		    <a href="#" class="navbar-brand mr-5" id="h_feat"><img src="assets/img/logo.png" alt="" width="125px" class="img-fluid"></a>
         <a href="#" class="nav-item nav-link d-block d-sm-block d-md-none d-lg-none d-xl-none">
           <span class="mr-1" style="font-size: 16px;">Sign in</span>
           <i class="icofont-cart icofont-2x"></i>
@@ -358,45 +359,40 @@
           <i class="icofont-location-pin icofont-2x"></i>&nbsp;<span style="font-size: 16px;">Select delivery location</span>
         </div>
 
-	              <div class="ml-3" id="dropdownMenuButton2" data-toggle="" aria-haspopup="true" aria-expanded="false" style="font-size: 12px;cursor: pointer;">
-                  <img src="assets/img/icons8-india-30.png"><i class="icofont-caret-down text-light"></i>
-
-                      <div class="dropdown-menu p-0 m-0" aria-labelledby="dropdownMenuButton2">
-                        <a class="dropdown-item p-1" href="#">All categories</a>
-                        <a class="dropdown-item p-1" href="#">Alexa Skills</a>
-                        <a class="dropdown-item p-1" href="#">Amazon deals</a>
-                        <a class="dropdown-item p-1" href="#">Amazon device</a>
-                        <a class="dropdown-item p-1" href="#">Amazon fashion</a>
-                        <a class="dropdown-item p-1" href="#">Amazon global store</a>
-                        <a class="dropdown-item p-1" href="#">Amazon pantry</a>
-                        <a class="dropdown-item p-1" href="#">App and games</a>
-                        <a class="dropdown-item p-1" href="#">Apliances</a>
-                        <a class="dropdown-item p-1" href="#">Baby</a>
-                        <a class="dropdown-item p-1" href="#">Beauty</a>
-                        <a class="dropdown-item p-1" href="#">Cook</a>
-                        <a class="dropdown-item p-1" href="#">Gathering</a>
-                        <a class="dropdown-item p-1" href="#">Outdoor</a>
-                        <a class="dropdown-item p-1" href="#">Music</a>
-                        <a class="dropdown-item p-1" href="#">Collectibles</a>
-                        <a class="dropdown-item p-1" href="#">Electronic</a>
-                        <a class="dropdown-item p-1" href="#">Furmiture</a>
-                      </div>
-
-                </div>
+        <div class="ml-3" style="cursor: pointer;">
+          <img src="assets/img/icons8-india-30.png"><i class="icofont-caret-down text-light"></i>
+        </div>
 
         <button type="button" class="navbar-toggler d-none d-sm-none d-md-block d-lg-none d-xl-none"
          data-toggle="collapse" data-target="#navbarCollapse">
             <i class="icofont-navigation-menu text-light icofont-1x"></i>
         </button>
 
-		    <div class="collapse navbar-collapse length" id="navbarCollapse">
-		        <div class="navbar-nav ml-auto">
-		            <a href="#" class="nav-item nav-link active" id="h_feat">Hello, Sign in <br>Accounts & Lists<i class="icofont-caret-down text-light"></i></a>
-		            <a href="#" class="nav-item nav-link" id="h_feat">Returns <br> & Orders</a>
-		            <a href="#" class="nav-item nav-link" id="h_feat">Try <br> Prime<i class="icofont-caret-down text-light"></i></a>
-		            <a href="#" class="nav-item nav-link" id="h_feat"><i class="icofont-cart icofont-2x"></i>Cart</a>
-		        </div>
-		    </div>
+        <div class="collapse navbar-collapse length" id="navbarCollapse">
+          <div class="navbar-nav ml-auto">
+
+            <a href="#" class="nav-item nav-link active" id="h_feat">
+              Hello, Sign in <br>Accounts & Lists
+              <i class="icofont-caret-down text-light"></i>
+            </a>
+            
+            <a href="#" class="nav-item nav-link" id="h_feat">
+              Returns <br> & Orders
+            </a>
+            
+            <a href="#" class="nav-item nav-link" id="h_feat">
+              Try <br> Prime
+              <i class="icofont-caret-down text-light"></i>
+            </a>
+            
+            <a href="#" class="nav-item nav-link" id="h_feat">
+              <i class="icofont-cart icofont-2x"></i>
+              Cart
+            </a>
+            
+          </div>
+        </div>
+
   		</nav>
     </div>
   </header>
@@ -404,13 +400,46 @@
   <section id="topbar" class="d-none d-xl-block" style="background-color: #232f3e;">
     <div class="container-fluid d-flex">
       <div class="contact-info">
-        <div class="row" style="margin-top: 6px;" id="h_feat">
+        <div class="row" data-toggle="modal" data-target="#exampleModal" style="margin-top: 6px;" id="h_feat">
           <div class="col-sm-2"><i class="icofont-location-pin mr-1 text-light" style="font-size: 32px;"></i></div>
           <div class="col-sm-10 small-LH" style="line-height: 0.89;">
-          	<a class="small" href="mailto:contact@example.com">Hello <br><span style="font-size: 14px;font-weight: bold;">select your address</span></a>
+          	<a class="small" href="#">Hello <br><span style="font-size: 14px;font-weight: bold;">select your address</span></a>
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="font-size: 14px; font-weight:bold;">Choose your location</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <h6 class="text-muted">Select a delivery location to see product availability and delivery options</h6>
+
+                  <button type="button" class="btn btn-warning text-center w-100 mb-2"
+                   style="text-shadow: 0px 1px 0px #FFE093;">
+                      Sign in to see your addresses
+                    </button>
+                    <h2><span>or enter a pincode</span></h2>
+                    <form>
+                        <div class="form-row">
+                          <div class="col-8">
+                            <input type="text" class="form-control" placeholder="">
+                          </div>
+                          <div class="col-4">
+                            <input type="text" class="form-control" placeholder="Apply">
+                          </div>
+                        </div>
+                      </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <div class="middle contact-info mr-auto mt-2">
         <nav class="mobile">
           <ul>
@@ -510,11 +539,11 @@
 
   <main id="main">
 
-    <section id="featured" class="featured mb-4">
+    <section id="featured" class="featured mb-2">
       <div class="container-fluid">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
 
-          <div class="col mb-4">
+          <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-2 py-4">
                 <h5 class="card-title mb-4">Card title</h5>
               <div class="row">
@@ -545,11 +574,11 @@
                   </small>
                 </div>
               </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+                <p class="card-text mt-3 under"><a href="#"><small class="text-muted">See more</small></a></p>
             </div>
           </div>
 
-          <div class="col mb-4">
+          <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-2 py-4">
                 <h5 class="card-title mb-4">Card title</h5>
               <div class="row">
@@ -580,11 +609,11 @@
                   </small>
                 </div>
               </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+                <p class="card-text mt-3 under"><a href="#"><small class="text-muted">See more</small></a></p>
             </div>
           </div>
 
-          <div class="col mb-4">
+          <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-2 py-4">
                 <h5 class="card-title mb-4">Card title</h5>
               <div class="row">
@@ -615,53 +644,33 @@
                   </small>
                 </div>
               </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+                <p class="card-text mt-3 under"><a href="#"><small class="text-muted">See more</small></a></p>
             </div>
           </div>
 
-          <!--           <div class="card p-2" style="border: none;">
-            <div class="row d-none d-sm-none d-md-none d-lg-block d-xl-block">
-              <div class="col-sm-12">
-                <div class="card p-2">
-                  <blockquote class="blockquote mb-0 card-body">
-                    <p><strong>Sign in for your best experience</strong></p>
-                      <button type="button" class="btn btn-lg btn-block" style="background-color: #f0c14b;border-radius: 0;">Sign in securely</button>
-                  </blockquote>
+          <div class="col mb-4 d-flex align-items-stretch">
+              <div class="card p-2">
+              <div class="row d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                <div class="col-sm-12">
+                  <div class="card">
+                    <blockquote class="blockquote mb-0 card-body">
+                      <h5><strong>Sign in for your best experience</strong></h5>
+                        <button type="button" class="btn btn-lg btn-block" style="background-color: #f0c14b;border-radius: 0;">Sign in securely</button>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="card">
+                    <img class="card-img" src="assets/img/about.jpg" alt="Card image">
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row mt-4">
-              <div class="col-sm-12">
-                <div class="card">
-                  <img class="card-img" src="assets/img/about.jpg" alt="Card image">
-                </div>
-              </div>
-            </div>
-          </div> -->
+            </div> 
 
-          <div class="col mb-4">
-            <div class="card p-2">
-            <div class="row d-none d-sm-none d-md-none d-lg-block d-xl-block">
-              <div class="col-sm-12">
-                <div class="card">
-                  <blockquote class="blockquote mb-0 card-body">
-                    <h5><strong>Sign in for your best experience</strong></h5>
-                      <button type="button" class="btn btn-lg btn-block" style="background-color: #f0c14b;border-radius: 0;">Sign in securely</button>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card">
-                  <img class="card-img" src="assets/img/about.jpg" alt="Card image">
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="col mb-4">
+          <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-2 py-4">
                 <h5 class="card-title mb-4">Card title</h5>
               <div class="row">
@@ -692,11 +701,11 @@
                   </small>
                 </div>
               </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+                <p class="card-text mt-3 under"><a href="#"><small class="text-muted">See more</small></a></p>
             </div>
           </div>
 
-          <div class="col mb-4">
+          <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-3 py-4">
                 <h5 class="card-title mb-4">Card title</h5>
               <div class="row mt-2">
@@ -704,11 +713,11 @@
                   <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
                 </div>
               </div>
-                <p class="card-text mt-4"><a href="#"><small class="text-muted">See more</small></a></p>
+                <p class="card-text mt-4 under"><a href="#"><small class="text-muted">See more</small></a></p>
             </div>
           </div>
 
-          <div class="col mb-4">
+          <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-2 py-4">
                 <h5 class="card-title mb-4">Card title</h5>
               <div class="row">
@@ -739,11 +748,11 @@
                   </small>
                 </div>
               </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+                <p class="card-text mt-3 under"><a href="#"><small class="text-muted">See more</small></a></p>
             </div>
           </div>
 
-          <div class="col mb-4">
+          <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-3 py-4">
                 <h5 class="card-title mb-4">Card title</h5>
               <div class="row mt-2">
@@ -751,135 +760,19 @@
                   <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
                 </div>
               </div>
-                <p class="card-text mt-4"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-3 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row mt-2">
-                <div class="col-sm-12">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                </div>
-              </div>
-                <p class="card-text mt-4"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+                <p class="card-text mt-4 under"><a href="#"><small class="text-muted">See more</small></a></p>
             </div>
           </div>
 
         </div>
       </div>
 
-      <div class="ext container-fluid my-4 d-none">
-        <div class="card p-5 h-100 w-100 mt-5">
+      <div class="ext container-fluid my-3 d-none">
+        <div class="card p-3 h-100 w-100 mt-5">
           <h4 class="ml-3">
-            <span style="font-size: 15px;">Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
-            <a href="#" style="color: blue;font-size: 12px;">View all offers in Wardrobe Refresh Sale</a>
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+              Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
+            <a href="#" class="under">View all offers in Wardrobe Refresh Sale</a>
           </h4>
 
           <div class="d-flex mt-4" style="height: 200px;">
@@ -892,415 +785,19 @@
           </div>
 
         </div>
-      </div>
+      </div> 
 
-<!--      <div class="ext container-fluid my-4 d-none">
-        <div class="card p-5 h-100 w-100 mt-5">
+    </section>
+
+    <section id="clients" class="clients container-fluid">
+      <div class="container-fluid p-2 center white py-5">
           <h4 class="ml-3">
-            <span style="font-size: 15px;">Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
-            <a href="#" style="color: blue;font-size: 12px;">View all offers in Wardrobe Refresh Sale</a>
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+              Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
+            <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
           </h4>
 
-          <div class="clients">
-            <div class="owl-carousel clients-carousel">
-              <img src="assets/img/clients/client-1.png" alt="">
-              <img src="assets/img/clients/client-2.png" alt="">
-              <img src="assets/img/clients/client-3.png" alt="">
-              <img src="assets/img/clients/client-4.png" alt="">
-              <img src="assets/img/clients/client-5.png" alt="">
-              <img src="assets/img/clients/client-6.png" alt="">
-              <img src="assets/img/clients/client-7.png" alt="">
-              <img src="assets/img/clients/client-8.png" alt="">
-            </div>
-          </div>
-
-        </div>
-      </div> -->
-
-    </section>
-
-    <div class="container-fluid mb-4 text-center">
-      <div class="">
-        <a href="#"><img src="assets/img/big.jpg" class ="img-responsive img-fluid"></a>
-      </div>
-    </div>
-
-    <div class="container-fluid mb-4 text-center">
-      <div class="container">
-        <a href="#"><img src="assets/img/big2.jpg" class ="img-responsive img-fluid"></a>
-      </div>
-    </div>
-
-
-    <section id="featured" class="featured">
-      <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-3 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row mt-2">
-                <div class="col-sm-12">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                </div>
-              </div>
-                <p class="card-text mt-4"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-3 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row mt-2">
-                <div class="col-sm-12">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                </div>
-              </div>
-                <p class="card-text mt-4"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-3 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row mt-2">
-                <div class="col-sm-12">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                </div>
-              </div>
-                <p class="card-text mt-4"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-          <div class="col mb-4">
-            <div class="card p-2 py-4">
-                <h5 class="card-title mb-4">Card title</h5>
-              <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
-                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
-                  <small class="text-muted">
-                    price
-                  </small>
-                </div>
-              </div>
-                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="clients" class="clients">
-      <div class="container-fluid">
-
-        <div class="section-title">
-          <h2>Top subscription apps for you</h2>
-        </div>
-
-        <div class="owl-carousel clients-carousel">
+        <div class="owl-carousel clients-carousel py-3">
           <img src="assets/img/clients/client-1.png" alt="">
           <img src="assets/img/clients/client-2.png" alt="">
           <img src="assets/img/clients/client-3.png" alt="">
@@ -1311,6 +808,600 @@
           <img src="assets/img/clients/client-8.png" alt="">
         </div>
 
+      </div>
+    </section>
+
+    <section id="clients" class="clients container-fluid">
+      <div class="container-fluid p-2 center white py-5">
+          <h4 class="ml-3">
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+              Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
+            <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
+          </h4>
+
+        <div class="owl-carousel clients-carousel py-3">
+          <img src="assets/img/clients/client-1.png" alt="">
+          <img src="assets/img/clients/client-2.png" alt="">
+          <img src="assets/img/clients/client-3.png" alt="">
+          <img src="assets/img/clients/client-4.png" alt="">
+          <img src="assets/img/clients/client-5.png" alt="">
+          <img src="assets/img/clients/client-6.png" alt="">
+          <img src="assets/img/clients/client-7.png" alt="">
+          <img src="assets/img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="featured" class="featured">
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clients" class="clients container-fluid">
+        <div class="container-fluid p-2 center white py-5">
+          <h4 class="ml-3">
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+              Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
+            <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
+          </h4>
+  
+          <div class="owl-carousel clients-carousel py-3">
+            <img src="assets/img/clients/client-1.png" alt="">
+            <img src="assets/img/clients/client-2.png" alt="">
+            <img src="assets/img/clients/client-3.png" alt="">
+            <img src="assets/img/clients/client-4.png" alt="">
+            <img src="assets/img/clients/client-5.png" alt="">
+            <img src="assets/img/clients/client-6.png" alt="">
+            <img src="assets/img/clients/client-7.png" alt="">
+            <img src="assets/img/clients/client-8.png" alt="">
+          </div>
+  
+        </div>
+      </section>
+
+      <section id="clients" class="clients container-fluid">
+        <div class="container-fluid p-2 center white py-5">
+          <h4 class="ml-3">
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+              Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
+            <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
+          </h4>
+  
+          <div class="owl-carousel clients-carousel py-3">
+            <img src="assets/img/clients/client-1.png" alt="">
+            <img src="assets/img/clients/client-2.png" alt="">
+            <img src="assets/img/clients/client-3.png" alt="">
+            <img src="assets/img/clients/client-4.png" alt="">
+            <img src="assets/img/clients/client-5.png" alt="">
+            <img src="assets/img/clients/client-6.png" alt="">
+            <img src="assets/img/clients/client-7.png" alt="">
+            <img src="assets/img/clients/client-8.png" alt="">
+          </div>
+  
+        </div>
+      </section>
+
+
+    <div class="container-fluid mb-5 text-center">
+        <a href="#"><img src="assets/img/big2.jpg" class ="img-responsive img-fluid"></a>
+    </div>
+
+
+    <section id="featured" class="featured">
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="clients" class="clients container-fluid">
+      <div class="container-fluid p-2 center white py-5">
+          <h4 class="ml-3">
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+              Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
+            <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
+          </h4>
+
+        <div class="owl-carousel clients-carousel py-3">
+          <img src="assets/img/clients/client-1.png" alt="">
+          <img src="assets/img/clients/client-2.png" alt="">
+          <img src="assets/img/clients/client-3.png" alt="">
+          <img src="assets/img/clients/client-4.png" alt="">
+          <img src="assets/img/clients/client-5.png" alt="">
+          <img src="assets/img/clients/client-6.png" alt="">
+          <img src="assets/img/clients/client-7.png" alt="">
+          <img src="assets/img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="clients" class="clients container-fluid">
+      <div class="container-fluid p-2 center white py-5">
+          <h4 class="ml-3">
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+              Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
+            <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
+          </h4>
+
+        <div class="owl-carousel clients-carousel py-3">
+          <img src="assets/img/clients/client-1.png" alt="">
+          <img src="assets/img/clients/client-2.png" alt="">
+          <img src="assets/img/clients/client-3.png" alt="">
+          <img src="assets/img/clients/client-4.png" alt="">
+          <img src="assets/img/clients/client-5.png" alt="">
+          <img src="assets/img/clients/client-6.png" alt="">
+          <img src="assets/img/clients/client-7.png" alt="">
+          <img src="assets/img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="featured" class="featured">
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+
+          <div class="col mb-4 d-flex align-items-stretch">
+            <div class="card p-2 py-4">
+                <h5 class="card-title mb-4">Card title</h5>
+              <div class="row">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about2.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about3.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex flex-column">
+                  <img class="card-img-top flex-grow-1" src="assets/img/about4.jpg" alt="Card image cap">
+                  <small class="text-muted">
+                    price
+                  </small>
+                </div>
+              </div>
+                <p class="card-text mt-3"><a href="#"><small class="text-muted">See more</small></a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="clients" class="clients container-fluid">
+      <div class="container-fluid p-2 center white py-5">
+          <h4 class="ml-3">
+            <span style="font-size: 21px;color: #444 !important;font-weight: 400;">
+                Best Sellers in Toys & Games</span>
+          </h4>
+
+        <div class="home-banner-slider owl-carousel clients-carousel py-3">
+          <img src="assets/img/clients/client-1.png" alt="">
+          <img src="assets/img/clients/client-2.png" alt="">
+          <img src="assets/img/clients/client-3.png" alt="">
+          <img src="assets/img/clients/client-4.png" alt="">
+          <img src="assets/img/clients/client-5.png" alt="">
+          <img src="assets/img/clients/client-6.png" alt="">
+          <img src="assets/img/clients/client-7.png" alt="">
+          <img src="assets/img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="clients" class="clients container-fluid">
+      <div class="container-fluid p-2 text-center white py-5">
+        <div class="text-center">
+        <h6 style="font-size: 12px;font-weight: bold;">See personalized recommendations</h6>
+            <button type="button" class="btn btn-warning text-center w-sm-100 w-md-75 w-lg-50 w-xl-25 mb-2" style="text-shadow: 0px 1px 0px #FFE093;">
+              Sign in
+            </button>
+            <!-- style="text-shadow: 0px 1px 0px #FFE093;"-->
+        <h6 style="font-size:12px;">New customer?<a href="#" style="font-size:12px;" class="under"> Start here.</a></h6>
+        </div>
       </div>
     </section>
 
@@ -1451,9 +1542,10 @@
   </footer>
 
   <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/js/sidenav.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/dropdown.js"></script>
+  <script src="assets/js/modernizr-custom.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -1465,10 +1557,6 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
 
   <script src="assets/js/main.js"></script>
-
-  <script type="text/javascript">
-  	$('[data-sidenav]').sidenav();
-  </script>
 
   <style>
     @media only screen and (min-width: 992px) {
@@ -1483,8 +1571,8 @@
       #featured .ext {
         display: block !important;
         position: absolute;
-        top: calc(90% + 25px);
-      }
+        top: calc(85% + 25px);
+      } 
 
       .flex-direction-nav {
         position: absolute;
