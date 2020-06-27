@@ -569,10 +569,10 @@ section .small_1 {
 }
 .owl-nav button.owl-prev {
   left: 0;
-  padding: 20px;
+  padding: 12px;
 }
 .owl-nav button.owl-next {
-  padding: 20px;
+  padding: 12px;
   right: 0;
 }
 
@@ -603,6 +603,32 @@ h2 span {
   transition: all;
   text-decoration: none;
   outline: 0;
+}
+
+.owl-nav button .owl-prev {
+  left: 0;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.owl-nav button .owl-next {
+  left: 0;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.owl-nav button {
+  background-color: white !important;
+  color: black !important;
+  position: absolute;
+  top: 25%;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 1px 3px #888;
+  font-size: 18px !important;
+  font-weight: bolder;
+}
+
+form .js-click:focus {
+    background:olive;
 }
 
 /*
