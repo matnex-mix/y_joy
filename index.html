@@ -26,6 +26,141 @@
   <link href="assets/css/font-awesome.min.css" rel="stylesheet">
   <link href="assets/css/dropdown.css" rel="stylesheet">
   <link href="assets/css/reset.css" rel="stylesheet">
+
+  <style>
+    @media only screen and (min-width: 992px) {
+      #featured:first-of-type {
+        position: relative;
+        top: -320px;
+        z-index: 100;
+        background: linear-gradient(170deg, rgba(255,255,255,0) 0%, rgb(234, 237, 237) 100%);
+        padding-top: 30px;
+      }
+
+      #featured .ext {
+        display: block !important;
+        position: absolute;
+        top: calc(85% + 25px);
+      }
+
+      .flex-direction-nav {
+        position: absolute;
+        top: 150px;
+        width: 100%;
+      }
+    }
+
+    .owl-nav span {
+      color: #777 !important;
+      font-size: 2.5em;
+      padding: .4em;
+      position: relative;
+      top: -30px;
+      background: white !important;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 10px 6px -6px #aaa;
+      -moz-box-shadow: 0 10px 6px -6px #aaa;
+      box-shadow: 0 10px 6px -6px #aaa;
+      border: 1px solid #aaa;
+    }
+
+    .owl-nav button {
+      background-color: transparent !important;
+      opacity: 0;
+    }
+
+    .owl-nav button:hover {
+      opacity: 1;
+    }
+
+
+
+    body {
+      background: #eaeded;
+    }
+      .cp {
+        padding: .8rem 2rem;
+        font-weight: 600;
+        margin-right: 0 !important;
+      }
+
+      a.cp {
+        color: #222;
+        font-size: .95rem;
+      }
+
+      a.cp:hover {
+        background: #d7d7d7;
+      }
+
+      .cd {
+        position: relative;
+      }
+
+      .cd .icon {
+        color: #777;
+      }
+
+      .cd:hover .icon {
+        color: #222;
+      }
+
+      .sidenav-me {
+        position: relative;
+      }
+
+      .sidenav-me.hide *{
+        display: none !important;
+      }
+
+      .cd-main {
+        position: absolute;
+        top: 61px;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        background: white;
+        transform: translateX(-100%);
+        -webkit-animation: moveOut .4s ease forwards;
+        animation: moveOut .4s ease forwards;
+      }
+
+      .cd-main.active{
+        -webkit-animation: move .3s ease forwards;
+        animation: move .3s ease forwards;
+      }
+
+      @keyframes move {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+
+      @keyframes moveOut {
+        from {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+
+        to {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+      }
+
+      .bg-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 1rem;
+      }
+  </style>
 </head>
 
 <body>
@@ -371,25 +506,122 @@
         <div class="collapse navbar-collapse length" id="navbarCollapse">
           <div class="navbar-nav ml-auto">
 
-            <a href="#" class="nav-item nav-link active" id="h_feat">
-              Hello, Sign in <br>Accounts & Lists
-              <i class="icofont-caret-down text-light"></i>
-            </a>
-            
+            <span href="#" class="nav-item nav-link active position-relative" id="h_feat">
+              <span data-toggle="dropdown" data-target="account" >
+                Hello, Sign in <br>Accounts & Lists
+                <i class="icofont-caret-down text-light"></i>
+              </span>
+              <div id="account" class="my-dropdown p-3 shadow-sm bg-white text-dark" >
+                <div class="text-center p-2">
+                  <button class="btn btn-warning btn-sm" style="width: 200px;">Sign in</button>
+                  <div class="mt-2">
+                    <small>New customer? &nbsp;<a href="">Start here</a>.</small>
+                  </div>
+                </div>
+                <hr/>
+                <div class="row links">
+                  <div class="col-12 col-sm-6 p-4">
+                    <h5 class="text-weight-bold mb-3" >Your Lists</h5>
+
+                    <a href="#" class="my-dropdown-link" >Create a Wish List</a>
+                    <a href="#" class="my-dropdown-link" >Find a Wish List</a>
+                    <a href="#" class="my-dropdown-link" >Wish from Any Website</a>
+                    <a href="#" class="my-dropdown-link" >Baby Wish List</a>
+                    <a href="#" class="my-dropdown-link" >Discover your Style</a>
+                  </div>
+                  <div class="col-12 col-sm-6 p-4 border-left">
+                    <h5 class="text-weight-bold mb-3" >Your Account</h5>
+
+                    <a href="#" >Your Orders</a>
+                    <a href="#" >Your Wish List</a>
+                    <a href="#" >Your Recommendations</a>
+                    <a href="#" >Your Prime Membership</a>
+                    <a href="#" >Your Prime Video</a>
+                    <a href="#" >Your Subscribe & Save Items</a>
+                    <a href="#" >Memberships & Subscriptions</a>
+                    <a href="#" >Your Amazon Business Account</a>
+                    <a href="#" >Your Seller Account</a>
+                    <a href="#" >Manage Your Content and Devices</a>
+                  </div>
+                </div>
+              </div>
+            </span>
+            <style>
+              .my-dropdown {
+                width: 90vw;
+                max-width: 500px;
+                position: absolute;
+                top: 54px;
+                left: -300px;
+                z-index: 99999;
+                -webkit-box-shadow: 0 10px 6px -6px #aaa;
+                -moz-box-shadow: 0 10px 6px -6px #aaa;
+                box-shadow: 0 10px 6px -6px #aaa;
+                border: 1px solid #aaa;
+                opacity: 0;
+                transition: opacity 2.4s;
+                display: none;
+              }
+
+              .my-dropdown::after {
+                border: solid white;
+                background-color: white;
+                position: absolute;
+                top: -5px; left: 353px;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+                content: '';
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+              }
+
+              .my-dropdown h5 {
+                font-size: 1.2em;
+                font-weight: bolder;
+              }
+
+              .my-dropdown .links a {
+                color: black;
+                display: block;
+                font-size: 1.1em;
+                margin: 9px 0;
+              }
+
+              .my-dropdown .links a:hover {
+                color: orange;
+                text-decoration: underline;
+              }
+
+              #h_feat>span {
+                cursor: pointer;
+              }
+
+              #h_feat>span:hover+.my-dropdown {
+                opacity: 1;
+                display: block;
+              }
+
+              #h_feat:hover .my-dropdown{
+                opacity: 1;
+                display: block;
+              }
+            </style>
+
             <a href="#" class="nav-item nav-link" id="h_feat">
               Returns <br> & Orders
             </a>
-            
+
             <a href="#" class="nav-item nav-link" id="h_feat">
               Try <br> Prime
               <i class="icofont-caret-down text-light"></i>
             </a>
-            
+
             <a href="#" class="nav-item nav-link" id="h_feat">
               <i class="icofont-cart icofont-2x"></i>
               Cart
             </a>
-            
+
           </div>
         </div>
 
@@ -668,7 +900,7 @@
                 </div>
               </div>
             </div>
-            </div> 
+            </div>
 
           <div class="col mb-4 d-flex align-items-stretch">
             <div class="card p-2 py-4">
@@ -785,7 +1017,7 @@
           </div>
 
         </div>
-      </div> 
+      </div>
 
     </section>
 
@@ -986,7 +1218,7 @@
               Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
             <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
           </h4>
-  
+
           <div class="owl-carousel clients-carousel py-3">
             <img src="assets/img/clients/client-1.png" alt="">
             <img src="assets/img/clients/client-2.png" alt="">
@@ -997,7 +1229,7 @@
             <img src="assets/img/clients/client-7.png" alt="">
             <img src="assets/img/clients/client-8.png" alt="">
           </div>
-  
+
         </div>
       </section>
 
@@ -1008,7 +1240,7 @@
               Wardrobe Refresh Sale | Up to 70% off &nbsp;&nbsp; </span>
             <div><a href="#" class="under">View all offers in Wardrobe Refresh Sale</a><div>
           </h4>
-  
+
           <div class="owl-carousel clients-carousel py-3">
             <img src="assets/img/clients/client-1.png" alt="">
             <img src="assets/img/clients/client-2.png" alt="">
@@ -1019,7 +1251,7 @@
             <img src="assets/img/clients/client-7.png" alt="">
             <img src="assets/img/clients/client-8.png" alt="">
           </div>
-  
+
         </div>
       </section>
 
@@ -1557,116 +1789,6 @@
   <script src="assets/vendor/venobox/venobox.min.js"></script>
 
   <script src="assets/js/main.js"></script>
-
-  <style>
-    @media only screen and (min-width: 992px) {
-      #featured:first-of-type {
-        position: relative;
-        top: -320px;
-        z-index: 100;
-        background: linear-gradient(170deg, rgba(255,255,255,0) 0%, rgb(234, 237, 237) 100%);
-        padding-top: 30px;
-      }
-
-      #featured .ext {
-        display: block !important;
-        position: absolute;
-        top: calc(85% + 25px);
-      } 
-
-      .flex-direction-nav {
-        position: absolute;
-        top: 150px;
-        width: 100%;
-      }
-    }
-
-    body {
-      background: #eaeded;
-    }
-      .cp {
-        padding: .8rem 2rem;
-        font-weight: 600;
-        margin-right: 0 !important;
-      }
-
-      a.cp {
-        color: #222;
-        font-size: .95rem;
-      }
-
-      a.cp:hover {
-        background: #d7d7d7;
-      }
-
-      .cd {
-        position: relative;
-      }
-
-      .cd .icon {
-        color: #777;
-      }
-
-      .cd:hover .icon {
-        color: #222;
-      }
-
-      .sidenav-me {
-        position: relative;
-      }
-
-      .sidenav-me.hide *{
-        display: none !important;
-      }
-
-      .cd-main {
-        position: absolute;
-        top: 61px;
-        width: 100%;
-        height: 100%;
-        z-index: 999999;
-        background: white;
-        transform: translateX(-100%);
-        -webkit-animation: moveOut .4s ease forwards;
-        animation: moveOut .4s ease forwards;
-      }
-
-      .cd-main.active{
-        -webkit-animation: move .3s ease forwards;
-        animation: move .3s ease forwards;
-      }
-
-      @keyframes move {
-        from {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-
-        to {
-          transform: translateX(0%);
-          opacity: 1;
-        }
-      }
-
-      @keyframes moveOut {
-        from {
-          transform: translateX(0%);
-          opacity: 1;
-        }
-
-        to {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-      }
-
-      .bg-img {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        padding: 1rem;
-      }
-  </style>
 
 </body>
 
