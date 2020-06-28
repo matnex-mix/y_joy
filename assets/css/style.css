@@ -570,10 +570,10 @@ section .small_1 {
 }
 .owl-nav button.owl-prev {
   left: 0;
-  padding: 12px;
+  padding: 15px;
 }
 .owl-nav button.owl-next {
-  padding: 12px;
+  padding: 15px;
   right: 0;
 }
 

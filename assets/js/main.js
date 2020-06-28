@@ -131,7 +131,7 @@
   // Clients carousel (uses the Owl Carousel library)
   $(".clients-carousel").owlCarousel({
     autoplay: true,
-    dots: true,
+    dots: false,
     margin: 10,
     nav: true,
     loop: true,
