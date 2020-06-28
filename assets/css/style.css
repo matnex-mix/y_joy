@@ -247,12 +247,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .middle .mobile ul li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 7px;
+  padding: 3px;
   font-size: 12px;
 }
 
 #topbar .middle .mobile ul {
-  margin-right: px;
+  margin-right: 25px!important;
 }
 
 #topbar .middle .mobile ul li a {
@@ -569,10 +570,10 @@ section .small_1 {
 }
 .owl-nav button.owl-prev {
   left: 0;
-  padding: 20px;
+  padding: 15px;
 }
 .owl-nav button.owl-next {
-  padding: 20px;
+  padding: 15px;
   right: 0;
 }
 
@@ -592,9 +593,19 @@ h2 span {
 
 #h_feat:hover{
   border: #fff solid 1px;
-  border-radius: 3px;
   text-decoration: none;
   outline: 0;
+  box-sizing: border-box;
+  margin: -1px;
+  transform: none;
+  translate: none;
+}
+
+#h_feat_exempt:hover{
+  border: #fff solid 1px;
+  text-decoration: none;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 #h_feat_other:hover{
@@ -603,8 +614,30 @@ h2 span {
   transition: all;
   text-decoration: none;
   outline: 0;
+  box-sizing: border-box;
 }
 
+.owl-nav button .owl-prev {
+  left: 0;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.owl-nav button .owl-next {
+  left: 0;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.owl-nav button {
+  background-color: white !important;
+  color: black !important;
+  position: absolute;
+  top: 25%;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 1px 3px #888;
+  font-size: 18px !important;
+  font-weight: bolder;
+}
 /*
 
 <a href="#" class="nav-item nav-link active" id="h_feat">Hello, Sign in <br>Accounts & Lists<i class="icofont-caret-down text-light"></i></a>
